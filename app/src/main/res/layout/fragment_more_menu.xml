@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/fragment_more_menu_super_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/fragment_more_menu_profile_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                android:textColor="#444A59"
+                android:text=""
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/fragment_more_menu_show_profile_text_view"
+                android:layout_below="@id/fragment_more_menu_profile_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="#5C6AC4"
+                android:text="Show Profile"
+                android:fontFamily="sans-serif-medium"/>
+
+            <LinearLayout
+                android:id="@+id/fragment_more_menu_wallet_details_list_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_below="@id/fragment_more_menu_show_profile_text_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="#444A59"
+                    android:text="Wallet Balance"/>
+
+                <TextView
+                    android:id="@+id/fragment_more_menu_wallet_balance_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    android:textColor="#444A59"
+                    android:text=""
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/fragment_more_menu_remaining_bids_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="#00B289"
+                    android:text="Calculating Remaining Bids..."
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/fragment_more_menu_all_transactions_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textColor="#5C6AC4"
+                    android:text="ALL TRANSACTIONS"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_more_menu_items_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/fragment_more_menu_wallet_details_list_view">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D8DEEB"/>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_more_menu_select_cities_rtos_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="#444A59"
+                        android:text="Select Cities and RTOs"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chevron_right_lite"/>
+
+                </RelativeLayout>
+
+                <!--
+                <RelativeLayout
+                    android:id="@+id/fragment_more_menu_custom_buying_request_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="#444A59"
+                        android:text="Custom buying request"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chevron_right_lite"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D8DEEB"/>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_more_menu_faq_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="#444A59"
+                        android:text="FAQs"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chevron_right_lite"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_more_menu_terms_conditions_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="#444A59"
+                        android:text="Terms and Conditions"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_tick_mark"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chevron_right_lite"/>
+
+                </RelativeLayout>
+                -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#D8DEEB"/>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_more_menu_whatsapp_chat_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="#444A59"
+                        android:text="Chat with us (Whatsapp)"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/chat"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_more_menu_call_truebil_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        android:id="@+id/fragment_more_menu_call_truebil_text_view"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="#444A59"
+                        android:text="Call Truebil"/>
+
+                    <ImageView
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/phone"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment_more_menu_app_version_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:text="App Version: v6"
+                android:fontFamily="sans-serif-medium"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_more_menu_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
+

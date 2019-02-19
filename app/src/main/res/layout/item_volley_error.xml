@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/item_volley_error_linear_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/error" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57sp"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/something_went_wrong"
+            android:textColor="#444A59"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/error_message"
+            android:textColor="#7D8AA1"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/retry_volley_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31sp"
+            android:background="@drawable/background_white_stroke_gray_rounded"
+            android:lineSpacingExtra="30.5sp"
+            android:paddingLeft="60sp"
+            android:paddingRight="60sp"
+            android:text="@string/retry"
+            android:textAllCaps="false"
+            android:textColor="#5C6AC4"
+            android:textSize="17sp" />
+
+    </LinearLayout>

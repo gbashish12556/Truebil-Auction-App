@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.ListingActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_listing_super_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/activity_listing_scroll_view"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:descendantFocusability="blocksDescendants">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="100dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:background="@android:color/black"
+                        android:id="@+id/activity_listing_showcase_images_view_pager" />
+
+                    <ImageView
+                        android:layout_width="74dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/auction_closed_image"
+                        android:src="@drawable/auction_closed"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_listing_see_photos_button"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:minHeight="1dp"
+                        android:textAllCaps="false"
+                        android:elevation="20dp"
+                        android:text="See Photos"
+                        android:background="@drawable/background_white_rounded"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/background_listing_top_gradient"/>
+
+                    <ImageButton
+                        android:id="@+id/activity_listing_back_image_button"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back_white"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"/>
+
+                    <ImageButton
+                        android:id="@+id/activity_listing_previous_image_button"
+                        android:layout_width="48dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="true"
+                        android:padding="16dp"
+                        android:src="@drawable/chevron_left_lite"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/white"
+                        android:scaleType="fitCenter"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <ImageButton
+                        android:id="@+id/activity_listing_next_image_button"
+                        android:layout_width="48dp"
+                        android:layout_height="100dp"
+                        android:adjustViewBounds="true"
+                        android:padding="16dp"
+                        android:src="@drawable/chevron_right_lite"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/white"
+                        android:scaleType="fitCenter"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_listing_car_info_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:clipToPadding="false"
+                    android:background="@color/white"
+                    android:elevation="1dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/activity_listing_year_make_name_text_view"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="20sp"
+                            android:textColor="#444A59"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:lineSpacingMultiplier="1.1"
+                            android:layout_marginBottom="8dp"
+                            android:text="2012 Swift VDI" />
+
+                        <LinearLayout
+                            android:id="@+id/activity_listing_truescore_linear_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_truescore"
+                            android:padding="2dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:id="@+id/activity_listing_truescore_text_view"
+                                android:textColor="#FFF"
+                                android:includeFontPadding="false"
+                                android:text="4.5"
+                                android:fontFamily="sans-serif-medium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#fff"
+                                android:includeFontPadding="false"
+                                android:textSize="10sp"
+                                android:text="TrueScore"
+                                android:fontFamily="sans-serif-medium"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/activity_listing_secondary_desc_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/activity_listing_mileage_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:lineSpacingExtra="4dp"
+                            android:textColor="#444A59"
+                            android:text="32000km"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#444A59"
+                            android:text=" • "/>
+
+                        <TextView
+                            android:id="@+id/activity_listing_fuel_type_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#444A59"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="Petrol" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#444A59"
+                            android:text=" • "/>
+
+                        <TextView
+                            android:id="@+id/activity_listing_owner_detail_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#444A59"
+                            android:text="1st Owner"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#444A59"
+                            android:id="@+id/activity_listing_suggested_price_title_text_view"
+                            android:text="Suggested Price: "
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <TextView
+                            android:id="@+id/activity_listing_suggested_price_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="#444A59"
+                            android:text=""
+                            android:fontFamily="sans-serif-medium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/activity_listing_car_status_linear_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:visibility="gone"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:orientation="horizontal"
+                        android:background="#e8f6fc">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bell" />
+
+                        <TextView
+                            android:id="@+id/activity_listing_car_status_text_view"
+                            android:layout_width="0dp"
+                            android:layout_weight="8"
+                            android:textSize="15sp"
+                            android:textColor="#444A59"
+                            android:text="The car is in top condition. Security camera power folding ORVM is a plus"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/activity_listing_tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        app:tabTextAppearance="@style/TabLayoutBackground"
+                        app:tabMode="scrollable"
+                        app:tabIndicatorColor="#5d6cbe"
+                        app:tabTextColor="#7D8AA1"
+                        app:tabSelectedTextColor="#5C6AC4"
+                        app:tabIndicatorHeight="3dp"
+                        app:tabPaddingTop="-8dp"/>
+
+                </LinearLayout>
+
+
+                <com.truebil.business.CustomLayouts.WrapContentViewPager
+                    android:id="@+id/activity_listing_details_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/activity_listing_progress_bar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center"/>
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        android:clickable="true"
+        android:focusable="true" />
+
+</android.support.design.widget.CoordinatorLayout>

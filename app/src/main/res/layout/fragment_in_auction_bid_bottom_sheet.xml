@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:clipToPadding="false"
+    android:background="@android:color/transparent"
+    tools:context=".Fragments.InAuctionBidBottomSheetFragment">
+
+    <RelativeLayout
+        android:id="@+id/fragment_in_auction_top_header_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/fragment_in_auction_bid_status_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="15sp"
+            android:text="@string/winning_bid_status"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/background_green" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignBottom="@id/fragment_in_auction_bid_status_text_view"
+            android:background="@drawable/background_upward_shadow" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_in_auction_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_in_auction_top_header_relative_layout"
+        android:orientation="vertical"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="16dp"
+        android:background="@android:color/white"
+        android:elevation="20dp">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1.2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#7D8AA1"
+                    android:textAllCaps="true"
+                    android:text="Time Remaining"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/fragment_in_auction_time_remaining_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="#444A59"
+                    android:text="00:00:00s"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#7D8AA1"
+                    android:text="Highest Bid"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/fragment_in_auction_highest_bid_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:textColor="#444A59"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#7D8AA1"
+                    android:text="My Bid"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/fragment_in_auction_my_bid_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:textColor="#444A59"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/fragment_in_auction_edit_bid_limit_super_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#7D8AA1"
+                    android:text="Bid Limit Set To"
+                    android:textSize="11sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/fragment_in_auction_set_bid_limit_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹2.90L"
+                        android:textColor="#444A59"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <LinearLayout
+                        android:id="@+id/fragment_in_auction_edit_bid_limit_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:adjustViewBounds="true"
+                            android:padding="2dp"
+                            android:tint="#03A9F4"
+                            android:src="@drawable/ic_pencil"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textColor="#03A9F4"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            android:text="Edit"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fragment_in_auction_set_bid_limit_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Set Auto Bid"
+                android:textColor="#5C6AC4"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:background="@drawable/background_gray_stroke_rounded"/>
+
+            <LinearLayout
+                android:id="@+id/fragment_in_auction_make_bid_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:padding="12dp"
+                android:visibility="visible"
+                android:background="@drawable/background_button_purple"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fragment_in_auction_make_bid_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Bid for Rs. 1.98L"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:visibility="visible"
+                    android:textAllCaps="false" />
+
+                <ProgressBar
+                    android:id="@+id/fragment_in_auction_make_bid_progress_bar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:theme="@style/Progressbar.White"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_in_auction_adjust_bid_limit_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#7D8AA1"
+                    android:text="Suggested Price"
+                    android:textSize="11sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginStart="-4dp"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/fragment_in_auction_decrease_bid_limit_image_button"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:adjustViewBounds="true"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_minus_square"
+                        android:tint="#5C6AC4"/>
+
+                    <TextView
+                        android:id="@+id/fragment_in_auction_suggested_auto_bid_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹2.90L"
+                        android:textColor="#444A59"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <ImageButton
+                        android:id="@+id/fragment_in_auction_increase_bid_limit_image_button"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:adjustViewBounds="true"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_plus_square"
+                        android:tint="#5C6AC4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_in_auction_confirm_bid_limit_linear_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:padding="12dp"
+                android:visibility="gone"
+                android:background="@drawable/background_gray_stroke_rounded"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#5C6AC4"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Confirm Bid Limit"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:visibility="visible"
+                    android:textAllCaps="false" />
+
+                <ProgressBar
+                    android:id="@+id/fragment_in_auction_confirm_bid_progress_bar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

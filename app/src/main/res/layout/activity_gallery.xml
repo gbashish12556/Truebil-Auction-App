@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activities.GalleryActivity">
+
+    <LinearLayout
+        android:id="@+id/item_gallery_slider_car_description_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_gallery_slider_primary_description_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="2012 • Wagon-R LXI - Petrol • Pune"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/item_gallery_slider_secondary_description_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="62,390km • 1st Owner  • RTO (MH-02)"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/activity_gallery_image_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:paddingTop="52dp"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:id="@+id/activity_gallery_image_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@drawable/background_gallery_transparent_header"
+        android:gravity="center_vertical">
+        
+        <ImageButton
+            android:id="@+id/activity_gallery_back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/back_white"
+            android:adjustViewBounds="true"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside" />
+        
+        <HorizontalScrollView
+            android:id="@+id/activity_gallery_header_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/activity_gallery_header_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical" />
+
+        </HorizontalScrollView>
+        
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_gallery_image_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_gallery_image_header_bar"/>
+
+    <!-- ZOOM image photo view, etc. -->
+    <RelativeLayout
+        android:id="@+id/activity_gallery_zoom_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/activity_gallery_photo_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true" />
+
+        <ImageButton
+            android:id="@+id/activity_gallery_zoom_out_image_button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_zoom_white"
+            android:background="@drawable/background_zoom_button"
+            android:scaleType="fitCenter"
+            android:padding="12dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

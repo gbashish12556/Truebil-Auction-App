@@ -1,0 +1,95 @@
+<resources>
+
+    <!--Title Activity-->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_listing">ListingActivity</string>
+
+    <!--Title Fragments-->
+    <string name="title_fragment_in_auction">In Auction</string>
+    <string name="title_fragment_my_bids">My Bids</string>
+    <string name="title_fragment_procured">Procured</string>
+    <string name="title_fragment_negotiating">Negotiating</string>
+    <string name="title_fragment_more">More</string>
+
+    <!--TextView Text-->
+    <string name="in_auction">In Auction</string>
+    <string name="my_bids">My Bids</string>
+    <string name="negotiating">Negotiating</string>
+    <string name="procured">Procured</string>
+    <string name="more">More</string>
+    <string name="fuel">Fuel</string>
+    <string name="seller">Seller</string>
+    <string name="rtos_and_cities">RTOs &amp; Current Cities</string>
+    <string name="insurance">Insurance</string>
+    <string name="locality">Locality</string>
+    <string name="idv">IDV</string>
+    <string name="owner">Owner</string>
+    <string name="explore_truebil_website">Not a car dealer?\nExplore our car collection on <a href="https://www.truebil.com/?utm_source=auction"><b>truebil.com</b></a></string>
+    <string name="not_car_dealer">Not a car dealer?</string>
+    <string name="truebil_weblink_button">Go to truebil.com</string>
+    <string name="verify">Please verify</string>
+    <string name="edit">Edit</string>
+    <string name="not_recieved">Not received yet?</string>
+    <string name="resend">Resend</string>
+    <string name="need_help">NEED HELP? CALL TRUEBIL</string>
+    <string name="truebil_care">Truebil Care</string>
+    <string name="truebil_care_number">02262459799</string>
+    <string name="contact_details">your contact details</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile Number</string>
+
+    <!--Plain Text-->
+    <string name="error_message">Please check wifi or Mobile data\n connection</string>
+    <string name="you_won_bid">You \n won bid</string>
+    <string name="negotiating_with_seller">Negotiating \n with seller</string>
+    <string name="waiting_for_payment">Waiting for \n payment</string>
+    <string name="low_balance">Please <b>recharge your wallet</b> with <b>₹5000</b> or more to continue for next bidding</string>
+    <string name="car_procured">Procured</string>
+    <string name="dealer_cancelled">Dealer \n cancelled</string>
+    <string name="seller_cancelled">Seller \n cancelled</string>
+    <string name="dealer_rejected">Rejected \n by dealer</string>
+    <string name="seller_rejected">Rejected \n by seller</string>
+    <string name="waiting_for_procurement">Procurement \n awaited</string>
+    <string name="lost">Lost</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="Image">Image</string>
+    <string name="yet_to_bid">Yet to bid</string>
+    <string name="timer_ends">00:00:00s</string>
+
+    <!--Symbol-->
+    <string name="rs_symbol">\u20B9</string>
+    <string name="Rs">\u20B9</string>
+
+    <!--Button Text-->
+    <string name="bid_button_symbol">Bid for \u0020</string>
+    <string name="retry">Retry</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="verify_mobile">Verify Mobile</string>
+
+    <!--Bid status-->
+    <string name="losing_bid_status">You are losing this car. Raise your bid.</string>
+    <string name="winning_bid_status">Great! You are winning this bid.</string>
+    <string name="pending_auto_bid_status">Your auto bid is being placed…</string>
+    <string name="negotiating_status">We are currently negotiating with seller</string>
+    <string name="waiting_for_procurement_status">Procurement awaited from seller</string>
+    <string name="waiting_payment_status">Congrats! We have procured your car</string>
+    <string name="dealer_cancelled_status">Deal is cancelled by dealer</string>
+    <string name="seller_cancelled_status">Deal is cancelled by seller</string>
+    <string name="dealer_rejected_status">Dealer has rejected this deal</string>
+    <string name="seller_rejected_status">Seller has rejected your offer</string>
+    <string name="lost_status">You have lost this bid</string>
+    <string name="rto_disclaimer">Refurbishment costs are rough estimates to help you make better decisions. The actual costs will vary.</string>
+    <string name="place_bid">Please place your bid.</string>
+
+    <!--Channels-->
+    <string name="auction_channel_name">Auction Notifications</string>
+    <string name="auction_channel_ID">Auction_ID</string>
+
+    <!--EditText Text-->
+    <string name="opt_edit_text">4 Digit OTP</string>
+
+    <!-- Toasts -->
+    <string name="enter_name">Please enter your name</string>
+    <string name="enter_mobile">Please enter your mobile number</string>
+
+</resources>

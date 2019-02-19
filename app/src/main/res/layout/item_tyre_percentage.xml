@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ProgressBar
+        android:id="@+id/item_tyre_percentage_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="6dp"
+        style="@style/TyreProgressBarBackground"
+        android:max="100"
+        android:progress="60"/>
+
+    <TextView
+        android:id="@+id/item_tyre_percentage_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="60% left"
+        android:textSize="15sp"
+        android:textColor="#90939b"/>
+
+</LinearLayout>

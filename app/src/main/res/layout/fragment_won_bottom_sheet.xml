@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragments.WonBottomSheetFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/deal_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/background_green"
+                android:text="@string/waiting_payment_status"
+                android:textSize="15sp"
+                android:textColor="@color/pure_white"
+                android:fontFamily="sans-serif-medium" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_alignBottom="@id/deal_status"
+                android:background="@drawable/background_upward_shadow" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_won_bottom_sheet_deal_stage_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="16dp"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                    <View
+                        android:id="@+id/first_dot"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/background_circle_purple" />
+
+                    <View
+                        android:id="@+id/first_line"
+                        android:layout_width="100dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/button_blue_background" />
+
+                    <View
+                        android:id="@+id/second_dot"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/background_circle_purple" />
+
+                    <View
+                        android:id="@+id/second_line"
+                        android:layout_width="100dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@color/button_blue_background" />
+
+                    <View
+                        android:id="@+id/third_dot"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/background_circle_purple" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/first_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="@string/you_won_bid"
+                    android:textColor="#444A59"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/second_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/negotiating_with_seller"
+                    android:textColor="#444A59"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/third_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/waiting_for_payment"
+                    android:textColor="#444A59"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/item_payment_invoice" />
+
+    </LinearLayout>
+
+</FrameLayout>

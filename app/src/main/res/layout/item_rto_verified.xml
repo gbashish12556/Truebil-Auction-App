@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+    
+    <TextView
+        android:id="@+id/item_rto_verified_key_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:text="Registration Expiry Date"
+        android:textSize="15sp"
+        android:textColor="#7D8AA1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" : "
+        android:textColor="@color/text_dark_grey"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/item_rto_verified_value_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:text="21-Oct-2025"
+        android:textSize="15sp"
+        android:textColor="#444A59"
+        android:fontFamily="sans-serif-medium"/>
+
+</LinearLayout>

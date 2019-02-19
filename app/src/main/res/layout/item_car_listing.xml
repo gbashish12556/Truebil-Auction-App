@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_car_listing_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="179dp"
+        android:paddingStart="18dp"
+        android:paddingLeft="18dp"
+        android:paddingEnd="18dp"
+        android:paddingRight="18dp"
+        android:clipToPadding="false" />
+
+    <ImageView
+        android:id="@+id/item_car_listing_auction_closed_image_view"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:visibility="gone"
+        android:src="@drawable/auction_closed"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/item_car_listing_bidding_status_text_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignBottom="@id/item_car_listing_recycler_view"
+        android:background="@drawable/background_orange"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:text="Canceller by seller"
+        android:fontFamily="sans-serif-medium"/>
+
+    <LinearLayout
+        android:id="@+id/item_car_listing_car_details_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical"
+        android:layout_below="@id/item_car_listing_recycler_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_car_listing_manufacturing_year_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="2012"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=" "
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/item_car_listing_variant_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Maruti Suzuki Zen"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=" "
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/item_car_listing_fuel_type_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Petrol"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=" • "
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/item_car_listing_city_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Chandigarh"
+                android:fontFamily="sans-serif-medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_car_listing_mileage_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="100000 km" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=" • " />
+
+            <TextView
+                android:id="@+id/item_car_listing_owner_detail_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="1st Owner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=" • " />
+
+            <TextView
+                android:id="@+id/item_car_listing_rto_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="CHD (CH-03)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_car_listing_bid_info_linear_layout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#7D8AA1"
+                    android:textAllCaps="true"
+                    android:text="Time Remaining"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/item_car_listing_time_remaining_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="#444A59"
+                    android:text="00:00:00s"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#7D8AA1"
+                    android:text="Highest Bid"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/item_car_listing_highest_bid_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹1,98,000"
+                    android:textSize="17sp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:textColor="#444A59"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#7D8AA1"
+                    android:text="My Bid"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:id="@+id/item_car_listing_my_bid_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹2,00,000"
+                    android:textSize="17sp"
+                    android:lineSpacingExtra="1.5dp"
+                    android:textColor="#444A59"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--
+        <LinearLayout
+            android:id="@+id/item_car_listing_bid_options_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/item_car_listing_edit_bid_limit_super_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#7D8AA1"
+                    android:text="Bid Limit Set To"
+                    android:textSize="11sp"
+                    android:textAllCaps="true"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/item_car_listing_set_bid_limit_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹2.90L"
+                        android:textColor="#444A59"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <LinearLayout
+                        android:id="@+id/item_car_listing_edit_bid_limit_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:adjustViewBounds="true"
+                            android:padding="2dp"
+                            android:tint="#03A9F4"
+                            android:src="@drawable/ic_pencil"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:textColor="#03A9F4"
+                            android:fontFamily="sans-serif-medium"
+                            android:includeFontPadding="false"
+                            android:text="Edit"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/item_car_listing_set_bid_limit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Set Bid Limit"
+                android:textColor="#5C6AC4"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:background="@drawable/background_gray_stroke_rounded"/>
+
+            <LinearLayout
+                android:id="@+id/item_car_listing_make_bid_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:visibility="visible"
+                android:background="@drawable/background_button_purple"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_car_listing_make_bid_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Bid for Rs. 1.98L"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:visibility="visible"
+                    android:textAllCaps="false" />
+
+                <ProgressBar
+                    android:id="@+id/item_car_listing_make_bid_progress_bar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:theme="@style/Progressbar.White"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_car_listing_adjust_bid_limit_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#7D8AA1"
+                    android:text="Suggested Price"
+                    android:textSize="11sp"
+                    android:textAllCaps="true"
+                    android:includeFontPadding="false"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/item_car_listing_decrease_bid_limit_image_button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_minus_square"
+                        android:tint="#5C6AC4"/>
+
+                    <TextView
+                        android:id="@+id/item_car_listing_suggested_auto_bid_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹2.90L"
+                        android:textColor="#444A59"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <ImageButton
+                        android:id="@+id/item_car_listing_increase_bid_limit_image_button"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_plus_square"
+                        android:tint="#5C6AC4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_car_listing_confirm_bid_limit_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:background="@drawable/background_gray_stroke_rounded"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#5C6AC4"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Confirm Bid Limit"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:visibility="visible"
+                    android:textAllCaps="false" />
+
+                <ProgressBar
+                    android:id="@+id/item_car_listing_confirm_bid_progress_bar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        -->
+
+        <LinearLayout
+            android:id="@+id/item_car_listing_bid_amount_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:text="My Bid Amount: "/>
+
+            <TextView
+                android:id="@+id/item_car_listing_bid_amount_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#444A59"
+                android:fontFamily="sans-serif-medium"
+                android:text="₹3.45 Lakh"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E6ED"
+        android:layout_below="@id/item_car_listing_car_details_linear_layout"/>
+
+</RelativeLayout>

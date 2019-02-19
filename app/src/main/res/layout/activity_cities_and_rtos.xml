@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:background="@color/white"
+    tools:context=".Activities.CitiesAndRtosActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_rto_header_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:elevation="4dp"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:id="@+id/activity_rto_back_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:padding="18dp"/>
+
+        <TextView
+            android:id="@+id/activity_rto_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rtos_and_cities"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-medium"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_rto_header_relative_layout"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:layout_gravity="top"
+        android:textColor="#5d6cbe"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:tabTextAppearance="@style/TabLayoutBackground"
+        app:tabMode="scrollable"
+        app:tabIndicatorColor="#5d6cbe"
+        app:tabTextColor="#7D8AA1"
+        app:tabSelectedTextColor="#444A59"
+        app:tabIndicatorHeight="3dp"
+        app:tabPaddingTop="-8dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_layout"
+        android:layout_above="@+id/submit_button"/>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_white_stroke_gray_rounded"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:textAllCaps="false"
+        android:textColor="#5C6AC4"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Submit"/>
+
+</RelativeLayout>

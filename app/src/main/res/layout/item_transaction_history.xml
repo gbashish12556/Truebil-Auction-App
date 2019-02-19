@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <ImageView
+        android:id="@+id/item_transaction_design_dot_image_view"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/circular_disk_transaction_item"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_transaction_design_dot_image_view"
+        android:layout_alignLeft="@id/item_transaction_design_dot_image_view"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@id/item_transaction_linear_layout"
+        android:layout_marginTop="2dp"
+        android:background="#5C6AC4" />
+
+    <LinearLayout
+        android:id="@+id/item_transaction_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_transaction_design_dot_image_view"
+        android:layout_toLeftOf="@id/item_transaction_amount_text_view"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_transaction_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#7D8AA1"
+            android:text="12 APR 2018"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/item_transaction_summary_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#444A59"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:text="Paid Procurement Security"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/item_transaction_car_info_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#444A59"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:text="Ecosport Titanium(3243234)"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_transaction_amount_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="- ₹2500"
+        android:layout_marginTop="4dp"
+        android:textColor="#FF7143"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif-medium"/>
+
+
+</RelativeLayout>

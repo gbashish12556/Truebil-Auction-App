@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:id="@+id/title"
+        android:layout_height="wrap_content"
+        android:textColor="#444A59"
+        android:textSize="17sp"
+        android:text="Total refurbishment cost"
+        android:fontFamily="sans-serif-medium"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:id="@+id/value"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_height="wrap_content"
+        android:textColor="#444A59"
+        android:textSize="17sp"
+        android:text="N/A"
+        android:fontFamily="sans-serif-medium"/>
+
+</LinearLayout>
+

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "977779327744",
+    "firebase_url": "https://truebil-auction-app.firebaseio.com",
+    "project_id": "truebil-auction-app",
+    "storage_bucket": "truebil-auction-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977779327744:android:83d0183b705bf899",
+        "android_client_info": {
+          "package_name": "com.truebil.business.debug.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977779327744-dc1ipvs0ppa9pik6hg2sskfddlo5cvpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMNQjurB-oaSh6nz6oKTuS0Js9JPxP3yM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

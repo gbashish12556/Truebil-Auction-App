@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:id="@+id/payment_invoice_detail"
+    android:background="@color/white"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Invoice"
+        android:textSize="24sp"
+        android:lineSpacingExtra="2sp"
+        android:textColor="#444A59"
+        android:fontFamily="sans-serif-medium"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D8DEEB"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="#444A59"
+            android:text="Car Price"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/car_price"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:textColor="#444A59"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5dp"
+            android:fontFamily="sans-serif-medium"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#444A59"
+            android:text="Refundable security deposit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ref_sec_deposit"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:textColor="#444A59"
+            android:fontFamily="sans-serif-medium"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#444A59"
+            android:text="Delivery charge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delivery_charge"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:textColor="#444A59"
+            android:fontFamily="sans-serif-medium"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5sp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#444A59"
+            android:text="Parking Charge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/parking_charge"
+            android:textSize="17sp"
+            android:lineSpacingExtra="10.5sp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:textColor="#444A59"
+            android:fontFamily="sans-serif-medium"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D8DEEB"
+        android:layout_marginTop="5sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#7D8AA1"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp"
+                android:text="TIME REMAINING"
+                android:fontFamily="sans-serif-medium"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="17sp"
+                    android:layout_height="17sp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/time_red"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="#FF7143"
+                    android:paddingLeft="4dp"
+                    android:paddingStart="4dp"
+                    android:text="2 Days"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_amount"
+            android:textColor="#444A59"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"/>
+
+    </LinearLayout>
+
+</LinearLayout>

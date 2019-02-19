@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    tools:context="com.truebil.business.Activities.BiddingActivity">
+    
+    <RelativeLayout
+        android:id="@+id/activity_bidding_header_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@android:color/white"
+        android:elevation="0dp">
+
+        <TextView
+            android:id="@+id/activity_bidding_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY BIDS"
+            android:textAllCaps="true"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_centerInParent="true"/>
+        
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/activity_bidding_bottom_menu_linear_layout"
+        android:layout_below="@id/activity_bidding_header_relative_layout"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_above="@id/activity_bidding_bottom_menu_linear_layout"
+        android:background="@drawable/background_upward_shadow"/>
+
+    <LinearLayout
+        android:id="@+id/activity_bidding_bottom_menu_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/in_auction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_bidding_in_auction_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_in_auction"
+                android:padding="4dp"
+                android:tint="@color/background_light_grey"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/activity_bidding_in_auction_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/in_auction"
+                android:textSize="11sp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_light_grey"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_bid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_bidding_my_bids_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                android:tint="@color/background_light_grey"
+                android:src="@drawable/ic_my_bids" />
+
+            <TextView
+                android:id="@+id/activity_bidding_my_bids_text_view"
+                android:layout_below="@id/activity_bidding_my_bids_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/my_bids"
+                android:textSize="11sp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_light_grey"
+                android:fontFamily="sans-serif-medium"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/procured"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_bidding_procured_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                android:tint="@color/background_light_grey"
+                android:src="@drawable/ic_procure" />
+
+            <TextView
+                android:id="@+id/activity_bidding_procured_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/procured"
+                android:textSize="11sp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_light_grey"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/more"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_bidding_more_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                android:tint="@color/background_light_grey"
+                android:src="@drawable/ic_more" />
+
+            <TextView
+                android:id="@+id/activity_bidding_more_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more"
+                android:textSize="11sp"
+                android:textAllCaps="true"
+                android:textColor="@color/text_light_grey"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

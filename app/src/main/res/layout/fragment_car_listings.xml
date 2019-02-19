@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.CarListingsFragment"
+    android:clipToPadding="false">
+
+    <include layout="@layout/item_volley_error"/>
+    <include layout="@layout/item_no_listings"/>
+    <include layout="@layout/item_no_rto_error"/>
+
+    <com.truebil.business.CustomLayouts.CustomSwipeRefreshLayout
+        android:id="@+id/fragment_car_listings_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_car_listings_list_view"
+            android:visibility="visible"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:background="@android:color/white"/>
+
+    </com.truebil.business.CustomLayouts.CustomSwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/fragment_car_listing_progress_bar"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</FrameLayout>

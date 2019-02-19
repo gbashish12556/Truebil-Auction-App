@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/background_upward_shadow" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <ImageButton
+                android:id="@+id/fragment_low_balance_close_image_button"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/close_black"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="146dp"
+                    android:layout_height="149dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/wallet"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#444A59"
+                    android:textSize="24sp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Not Enough Balance"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#444A59"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:autoLink="web"
+                    android:text="@string/low_balance"/>
+
+                <Button
+                    android:id="@+id/fragment_low_balance_call_sales_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="31dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="21dp"
+                    android:textSize="17sp"
+                    android:paddingRight="21dp"
+                    android:paddingLeft="21dp"
+                    android:textColor="@color/button_blue_background"
+                    android:background="@drawable/background_white_stroke_gray_rounded"
+                    android:text="Need Help? Call Sales Person"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
